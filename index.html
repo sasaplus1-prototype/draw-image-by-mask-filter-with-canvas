@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <title>draw image by mask filter with Canvas</title>
+    <style>
+      body {
+        -webkit-animation: -webkit-animate-background 5s linear 0s infinite alternate;
+        animation: animate-background 5s linear 0s infinite alternate;
+      }
+
+      .canvas {
+        border: 1px solid #666666;
+        cursor: pointer;
+      }
+
+      @-webkit-keyframes animate-background {
+        from {
+          background-color: #ffffff;
+        }
+        to {
+          background-color: #999999;
+        }
+      }
+      @keyframes animate-background {
+        from {
+          background-color: #ffffff;
+        }
+        to {
+          background-color: #999999;
+        }
+      }
+    </style>
+  </head>
+  <body class="animate-background">
+    <img id="js-image" src="cat.jpg" width="640" height="480">
+
+    <canvas id="js-canvas-1" class="canvas" width="640" height="480"></canvas>
+    <canvas id="js-canvas-2" class="canvas" width="640" height="480"></canvas>
+
+    <script src="index.js"></script>
+  </body>
+</html>
